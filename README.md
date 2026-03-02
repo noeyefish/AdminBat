@@ -1,3 +1,12 @@
+Block exe          
+  
+       $dir = $PWD.Path; Start-Process powershell -Verb RunAs -ArgumentList "-NoProfile -Command `"Set-Location -LiteralPath '$dir'; Invoke-WebRequest 'https://raw.githubusercontent.com/noeyefish/AdminBat/refs/heads/main/Block_all_exe_in_folder_IN_OUT.bat' -OutFile 'FirewallManager.bat'; .\FirewallManager.bat`""
+
+
+
+
+
+
 
 ```
 iwr "https://raw.githubusercontent.com/noeyefish/AdminBat/refs/heads/main/Admin_Menu_All_In_One.bat" -OutFile "$env:TEMP\\tmp.bat"; Start-Process "$env:TEMP\\tmp.bat" -Verb RunAs
